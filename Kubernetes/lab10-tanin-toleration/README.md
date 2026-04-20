@@ -39,7 +39,7 @@ NAME                       STATUS   ROLES           AGE   VERSION
 myclaster-control-plane    Ready    control-plane   XXm   v1.xx.x
 myclaster-worker           Ready    <none>          XXm   v1.xx.x
 ```
-![alt text](1.png)
+![My Image](1.png)
 ---
 ---
 
@@ -55,7 +55,7 @@ kubectl taint nodes myclaster-worker  node=worker:NoSchedule
 
 * `node=worker` → key=value
 * `NoSchedule` → pods will not be scheduled unless they tolerate it
-![alt text](2.png)
+![My Image](2.png)
 ---
 
 ## 🔍 Step 3: Verify Taint
@@ -71,7 +71,7 @@ Look for:
 ```
 Taints: node=worker:NoSchedule
 ```
-![alt text](3.png)
+![My Image](3.png)
 ---
 
 ## 🧠 Step 4: Test Scheduling Behavior
@@ -134,7 +134,7 @@ kubectl apply -f pod-toleration.yaml
 ```
 
 ➡️ Pod **can now be scheduled** on the tainted node.
-![alt text](4.png)
+![My Image](4.png)
 ---
 
 ## 🧹 Cleanup
@@ -150,7 +150,7 @@ Delete test pods:
 ```bash
 kubectl delete pod test-pod test-pod-toleration
 ```
-![alt text](5 .png)
+![My Image](5.png)
 ---
 
 ## 📚 Key Concepts
